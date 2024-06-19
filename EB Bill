@@ -1,0 +1,39 @@
+def transcation():
+    login=int(input("enter 1 or 2 : "))
+    if login==1:
+        print("UPI transcation")
+        upid=str(input("enter your up id: "))
+        print("payment done")
+    elif login==2:
+        print("Card transcation")
+        card=int(input("card detiles:"))
+        print("payment done")
+    else:
+        print("invalid enter")
+
+print("welcome To Online EB-Bill")
+add=str(input("enter your address"))
+ph=int(input("enter your phone number"))
+sn=int(input("enter your service no"))
+if sn>=100 and sn<=999:
+       un=int(input("enter the un value"))
+       if un<=100:
+           print("free of charge")
+       elif un>100 and un<=400:
+           charges=2*un
+           print(" ammount to pay: ",charges)
+           transcation()
+       elif un>400 and un<=700:
+            charges=3*un
+            print("ammount to pay:",charges)
+            transcation()
+       elif un>700 and un<=1000:
+            charges=4*un
+            print("ammount to pay:",charges)
+            transcation()
+       else:
+            print("conduct to eb-office")
+
+else:
+    print("invalid sn number")
+    
